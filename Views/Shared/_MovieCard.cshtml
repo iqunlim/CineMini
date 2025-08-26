@@ -1,0 +1,28 @@
+@model CineMini.Models.Movie
+
+@{
+    // Basically, Feature takes first priority and applies yellow border, 
+    // if not featured but classic then green border
+    // Else no border at all
+    var borderStyle = Model.IsFeatured 
+        ? "border border-warning" 
+        : Model.IsClassic 
+            ? "border border-success" 
+            : "";
+    var badgeStyle = Model.IsFeatured ? "bg-warning" : "bg-success";
+    var badgeText = Model.IsFeatured ? "Featured" : "Classic";
+    var hasBadge = Model.IsFeatured || Model.IsClassic;
+}
+
+<div class="card bg-body-secondary position-relative @borderStyle" style="flex: 1; min-width: 400px; min-height: 200px"
+     xmlns="http://www.w3.org/1999/html">
+    <div class="card-body">
+        <a href="/details?id=@Model.Id"><h2>@Model.Title</h2></a>
+        <p class="m-0 p-0">Genre: @Model.Genre</p>
+        <p class="m-0 p-0">Release Year: @Model.ReleaseYear</p>
+        @if (hasBadge)
+        {
+            <p class="m-0 p-0 position-absolute start-100 @badgeStyle px-2 rounded-3 text-dark top-0 translate-middle z-2">@badgeText</p>
+        }
+    </div>
+</div>

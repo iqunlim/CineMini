@@ -1,0 +1,98 @@
+[
+    {
+      "Id": 1,
+      "Title": "2001: A Space Odyssey",
+      "Genre": "Sci-Fi",
+      "ReleaseYear": 1968,
+      "IsFeatured": false,
+      "IsClassic": true
+    },
+    {
+      "Id": 2,
+      "Title": "Blade Runner 2049",
+      "Genre": "Sci-Fi",
+      "ReleaseYear": 2017,
+      "IsFeatured": true,
+      "IsClassic": false
+    },
+    {
+      "Id": 3,
+      "Title": "The Princess Bride",
+      "Genre": "Fantasy",
+      "ReleaseYear": 1987,
+      "IsFeatured": false,
+      "IsClassic": true
+    },
+    {
+      "Id": 4,
+      "Title": "The Matrix",
+      "Genre": "Thriller",
+      "ReleaseYear": 1999,
+      "IsFeatured": false,
+      "IsClassic": false
+    },
+    {
+      "Id": 5,
+      "Title": "Interstellar",
+      "Genre": "Sci-Fi",
+      "ReleaseYear": 2014,
+      "IsFeatured": true,
+      "IsClassic": false
+    },
+    {
+      "Id": 6,
+      "Title": "Gladiator",
+      "Genre": "Action",
+      "ReleaseYear": 2000,
+      "IsFeatured": false,
+      "IsClassic": false
+    },
+    {
+      "Id": 7,
+      "Title": "The Godfather Part II",
+      "Genre": "Drama",
+      "ReleaseYear": 1974,
+      "IsFeatured": false,
+      "IsClassic": true
+    },
+    {
+      "Id": 8,
+      "Title": "Pan's Labyrinth",
+      "Genre": "Fantasy",
+      "ReleaseYear": 2006,
+      "IsFeatured": true,
+      "IsClassic": false
+    },
+    {
+      "Id": 9,
+      "Title": "Psycho",
+      "Genre": "Horror",
+      "ReleaseYear": 1960,
+      "IsFeatured": false,
+      "IsClassic": true
+    },
+    {
+      "Id": 10,
+      "Title": "District 9",
+      "Genre": "Sci-Fi",
+      "ReleaseYear": 2009,
+      "IsFeatured": false,
+      "IsClassic": false
+    },
+    {
+      "Id": 11,
+      "Title": "A Knight's Tale",
+      "Genre": "Fantasy",
+      "ReleaseYear": 2001,
+      "IsFeatured": false,
+      "IsClassic": false
+    },
+    {
+      "Id": 12,
+      "Title": "Mad Max: Fury Road",
+      "Genre": "Action",
+      "ReleaseYear": 2015,
+      "IsFeatured": true,
+      "IsClassic": false
+    }
+  ]
