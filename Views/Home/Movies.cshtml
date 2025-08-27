@@ -15,10 +15,8 @@
         }
         @foreach (var movie in Model)
         {
-            @* @await Html.PartialAsync("_MovieCard", movie) *@
-            // Bryan brought this up and I think it looks quite clean here.
-            //model = is what data is being passed in.
-            <partial name="_MovieCard" model="movie"/>
+            
+            <partial name="_MovieCard" model="movie" />
         }
     </div>
 </div>

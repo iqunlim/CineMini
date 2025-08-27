@@ -19,9 +19,9 @@
         <a href="/details/@(Model.Id)"><h2>@Model.Title</h2></a>
         <p class="m-0 p-0">Genre: @Model.Genre</p>
         <p class="m-0 p-0">Release Year: @Model.ReleaseYear</p>
-        @if (hasBadge)
-        {
-            <p class="m-0 p-0 position-absolute start-100 @badgeStyle px-2 rounded-3 text-dark top-0 translate-middle z-2">@badgeText</p>
-        }
     </div>
+    @if (hasBadge)
+    {
+        <p class="m-0 p-0 position-absolute start-100 @badgeStyle px-2 rounded-3 text-dark top-0 translate-middle z-3">@badgeText</p>
+    }
 </div>

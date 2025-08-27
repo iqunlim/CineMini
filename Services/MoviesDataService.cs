@@ -25,7 +25,7 @@ public class MoviesDataService : IMoviesDataProvider
         
     }
     
-    public List<Movie> GetData()
+    public List<Movie> GetAll()
     {
         return _data;
     }

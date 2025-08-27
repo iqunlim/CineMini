@@ -35,7 +35,7 @@ public class HomeController : Controller
         
         var movies = genre != null
             ? MovieDataProvider.GetByGenre(genre)
-            : MovieDataProvider.GetData();
+            : MovieDataProvider.GetAll();
         
         ViewBag.MovieCount = movies.Count;
         return View(movies);
