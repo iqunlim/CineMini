@@ -2,6 +2,21 @@
 
 <div class="container">
     <h1>@Model.Title</h1>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/movies">Movies</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Details - @Model.Title</li>
+        </ol>
+    </nav>
     <p>@Model.Genre</p>
     <p>@Model.ReleaseYear</p>
+    @if (Model.IsFeatured)
+    {
+        <span class="text-bg-warning px-2 rounded-3">Currently Featured</span>
+    }
+    @if (Model.IsClassic)
+    {
+        <span class="text-bg-success px-2 rounded-3">Certified Classic Movie</span>
+    }
 </div>

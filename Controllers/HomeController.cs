@@ -41,7 +41,9 @@ public class HomeController : Controller
         return View(movies);
     }
 
-    [HttpGet("details")]
+    // I Felt that having it as a route parameter rather than a query parameter was the better approach
+    // There is no default details page, so we must always have an ID
+    [HttpGet("details/{id}")]
     public IActionResult Details(int id)
     {
         if (id <= 0) return NotFound();

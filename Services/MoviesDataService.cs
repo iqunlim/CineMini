@@ -32,7 +32,10 @@ public class MoviesDataService : IMoviesDataProvider
 
     public Movie GetMovie(int id)
     {
-        return _data[id];
+        // Make sure its a valid check
+        if (id <= 0) throw new ArgumentException("ID must be greater than zero");
+        // ID in the dataset is one less than the passed in ID. We correct it here.
+        return _data[id-1];
     }
 
     public List<Movie> GetByGenre(string genre)

@@ -20,7 +20,7 @@
       "Title": "The Princess Bride",
       "Genre": "Fantasy",
       "ReleaseYear": 1987,
-      "IsFeatured": false,
+      "IsFeatured": true,
       "IsClassic": true
     },
     {
