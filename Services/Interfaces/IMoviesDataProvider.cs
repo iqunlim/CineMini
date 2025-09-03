@@ -7,4 +7,6 @@ public interface IMoviesDataProvider
     List<Movie> GetAll();
     Movie GetMovie(int id);
     List<Movie> GetByGenre(string genre);
+
+    List<string> GetGenres();
 }

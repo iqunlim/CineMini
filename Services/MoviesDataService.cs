@@ -9,6 +9,7 @@ namespace CineMini.Services;
 public class MoviesDataService : IMoviesDataProvider
 {
     private readonly List<Movie> _data;
+    private readonly List<string> _genres;
 
     public MoviesDataService()
     {
@@ -16,6 +17,7 @@ public class MoviesDataService : IMoviesDataProvider
         {
             var fileData = File.ReadAllText("Data/movies.json");
             _data = System.Text.Json.JsonSerializer.Deserialize<List<Movie>>(fileData) ?? [];
+            _genres = _data.Select(m => m.Genre).Distinct().ToList();
         }
         catch (Exception e)
         {
@@ -43,5 +45,10 @@ public class MoviesDataService : IMoviesDataProvider
         return _data
             .Where(movie => string.Equals(movie.Genre, genre, StringComparison.CurrentCultureIgnoreCase))
             .ToList();
+    }
+
+    public List<string> GetGenres()
+    {
+        return _genres;
     }
 }

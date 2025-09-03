@@ -1,14 +1,33 @@
 @model List<Movie>
 
-<div class="container">
+
+<div class="container" id="moviesList">
 <h1>@ViewData["Title"] - @ViewData["CurrentDate"]</h1>
+<div class="d-flex justify-content-between">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/movies">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">Movies</li>
         </ol>
     </nav>
-    <div class="d-flex gap-3 flex-wrap container my-3">
+
+    <div class="d-flex gap-2 align-items-center">
+        Genre: 
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                @ViewBag.CurrentGenre
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/movies">All</a></li>
+                @foreach (var genre in ViewBag.Genres)
+                {
+                    <li><a class="dropdown-item" href="/movies?genre=@genre">@genre</a></li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+    <div class="d-flex gap-3 flex-wrap container my-3 p-0">
         @if (Model.Count == 0)
         {
             <h2 class="text-danger">No movies found! Please try again later.</h2>

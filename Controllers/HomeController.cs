@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using CineMini.Models;
+using CineMini.Services;
 using CineMini.Services.Interfaces;
 
 namespace CineMini.Controllers;
@@ -38,6 +39,8 @@ public class HomeController : Controller
             : MovieDataProvider.GetAll();
         
         ViewBag.MovieCount = movies.Count;
+        ViewBag.Genres = MovieDataProvider.GetGenres();
+        ViewBag.CurrentGenre = genre ?? "All";
         return View(movies);
     }
 
